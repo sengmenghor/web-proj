@@ -37,6 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <li><a href="index.php">Home</a></li>
                 <li><a href="shop.php">Shop</a></li>
                 <li><a href="cart.php">Cart</a></li>
+                <li><a href="checkout.php">Checkout</a></li>
                 <?php if (isset($_SESSION['user'])): ?>
                     <li><a href="logout.php">Logout</a></li>
                 <?php else: ?>
