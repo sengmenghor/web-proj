@@ -15,7 +15,7 @@ echo "<!-- PHP Loaded Successfully -->";
   <body>
     <!-- Header -->
     <header>
-      <h1>The Sports</h1>
+      <h1>The </h1>
       <nav>
         <ul>
           <li><a href="index.php" class="active">Home</a></li>
