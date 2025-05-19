@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($username === $validUsername && $password === $validPassword) {
         $_SESSION['user'] = $username;
-        header('Location: index.php'); // Redirect to the homepage
+        header('Location: checkout.php'); // Redirect to the homepage
         exit();
     } else {
         $error = 'Invalid username or password.';
@@ -23,10 +23,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Sports</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="../js/script.js"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -34,10 +35,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <h1>The Sports</h1>
         <nav>
             <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="shop.php">Shop</a></li>
-                <li><a href="cart.php">Cart</a></li>
-                <li><a href="checkout.php">Checkout</a></li>
+                <li><a href="../src/index.php">Home</a></li>
+                <li><a href="../src/shop.php">Shop</a></li>
+                <li><a href="../src/cart.php">Cart</a></li>
+                <li><a href="../src/checkout.php">Checkout</a></li>
                 <?php if (isset($_SESSION['user'])): ?>
                     <li><a href="logout.php">Logout</a></li>
                 <?php else: ?>
