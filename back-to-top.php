@@ -1,1 +1,0 @@
-<button id="backToTop" class="back-to-top" onclick="scrollToTop()">↑</button>
