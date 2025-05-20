@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const cartItemsContainer = document.getElementById('cart-items');
   const cartTotalContainer = document.getElementById('cart-total');
   const cancelCartBtn = document.getElementById('cancel-cart-btn');
+  const checkoutBtn = document.getElementById('checkout-btn');
 
   // Retrieve the cart from localStorage
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -9,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (cart.length === 0) {
     cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
     cartTotalContainer.innerHTML = '';
+    if (checkoutBtn) checkoutBtn.style.display = 'none';
     return;
   }
 
@@ -35,6 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.removeItem('cart'); // Clear the cart from localStorage
     location.reload(); // Reload the page to update the cart
   });
+
+  // Add event listener to "Checkout" button
+  if (checkoutBtn) {
+    checkoutBtn.addEventListener('click', () => {
+      // Optionally, you can do more processing here
+      window.location.href = 'checkout.html'; // Redirect to checkout page
+    });
+  }
 });
 
 // Function to remove an item from the cart
